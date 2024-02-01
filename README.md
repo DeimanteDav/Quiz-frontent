@@ -1,7 +1,7 @@
 # Quiz-React
 Welcome to the Quiz Page built with ReactJS! 🚀
 
-# Overview
+## Overview
 Welcome to Quiz-React, a dynamic and engaging quiz platform built with ReactJS and styled with SCSS! This repository houses the frontend code for Quiz project, where users can create groups, make friends, and enjoy playing quizzes while keeping an eye on the leaderboards
 
 ## Features
