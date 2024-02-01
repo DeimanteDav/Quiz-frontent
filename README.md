@@ -1,3 +1,9 @@
+Welcome to the Quiz Page built with ReactJS! 🚀
+
+# Overview
+Explore interactive quizzes with this user-friendly ReactJS application. Create and join groups, connect with friends, and enjoy engaging quizzes. It's a dynamic space for learning and fun!
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
