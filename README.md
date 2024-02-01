@@ -2,7 +2,7 @@
 Welcome to the Quiz Page built with ReactJS! 🚀
 
 ## Overview
-Explore interactive quizzes with this user-friendly ReactJS application. Create and join groups, connect with friends, enjoy engaging quizzes, while keeping an eye on the leaderboards. It's a dynamic space for learning and fun!
+Welcome to Quiz-React, a dynamic and engaging quiz platform built with ReactJS and styled with SCSS, including the use of Material-UI! Create and join groups, connect with friends, enjoy engaging quizzes, while keeping an eye on the leaderboards. It's a dynamic space for learning and fun!
 
 ## Features
 
@@ -11,7 +11,6 @@ Explore interactive quizzes with this user-friendly ReactJS application. Create 
 - **Friendship:** Connect with other users, make friends, and enjoy the quiz experience together.
 - **Leaderboards:** Keep track of your performance and compete with others through interactive leaderboards.
 - **Responsive Design:** The frontend is designed to provide a seamless experience across various devices.
-- **SCSS Styling:** Stylish and maintainable stylesheets powered by SCSS for a customizable and organized design.
 - **Coins System:** Earn and utilize a coins system within the platform.
     - **Coin Usage:**
         - **Hints:** Spend coins to get helpful hints during quizzes.
