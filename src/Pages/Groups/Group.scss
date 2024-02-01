@@ -1,0 +1,9 @@
+.group-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .group-bottom {
+        margin-top: 150px;
+    }
+}

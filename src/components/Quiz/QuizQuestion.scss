@@ -1,0 +1,21 @@
+.quiz-question-wrapper {
+    width: 100%;
+    .top-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .current-question {
+            margin: 0;
+            padding: 0;
+    
+            span:first-of-type {
+                font-size: 28px;
+                font-weight: 500;
+            }
+            span:last-child {
+                color: grey;
+            }
+        }
+    }
+}

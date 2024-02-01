@@ -1,0 +1,28 @@
+.friends-page {
+    .find-friends {
+        display: flex;
+        flex-direction: column;
+
+        .input {
+            align-self: flex-start;
+        }
+    }
+
+    .friend-requests {
+        .friend-request {
+            align-items: center;
+            
+            @media (max-width: 420px) {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+    }
+
+    .find-friends, .friend-requests, .sent-requests, .friends, .blocked-users {
+        max-width: 500px;
+    }
+
+    
+}

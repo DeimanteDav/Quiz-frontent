@@ -1,0 +1,40 @@
+.questions-page {
+    .content {
+        margin-bottom: 80px;
+       
+        a {
+            text-decoration: none;
+            color: black;
+    
+            &:hover {
+                color: rgb(122, 122, 122);
+            }
+        }
+    }
+    
+    .rec-questions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        background-color: rgb(238, 238, 238);
+        border-radius: 5px;
+        padding: 20px 45px;
+        width: fit-content;
+
+        .text {
+            font-weight: 500;
+            display: block;
+        }
+        .input .MuiInputBase-root {
+            background-color: white;
+        }
+        .button {
+            background-color: rgb(91, 91, 91);
+
+            &:disabled {
+                background-color: rgb(186, 186, 186);
+            }
+        }
+    }
+}

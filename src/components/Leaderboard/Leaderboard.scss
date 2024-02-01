@@ -1,0 +1,53 @@
+.leaderboard-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    width: 100%;
+
+    .title {
+        margin: 30px;
+    }
+
+    .leaderboard-table {
+        text-transform: capitalize;
+        max-width: 550px;
+        
+        a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.1s ease-in-out;
+
+            &:hover {
+                color: rgb(145, 145, 145);
+            }
+            &:active {
+                color: red;
+            }
+
+        }
+        .head {
+            th {
+                font-weight: bold;        
+            }
+        }
+        
+        .body {
+            .item {
+                &.user {
+                    margin: 10px 0;
+                    background-color: lightblue;
+                }
+
+                .rank {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                td {
+                 padding: 20px
+                }
+            }
+
+        }
+    }
+}

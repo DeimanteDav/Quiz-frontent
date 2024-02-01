@@ -1,0 +1,10 @@
+.question-types {
+    a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: rgb(122, 122, 122);
+        }
+    }
+}

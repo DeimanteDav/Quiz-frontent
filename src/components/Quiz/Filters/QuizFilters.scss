@@ -1,0 +1,41 @@
+.quiz-filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 15px;
+    max-height: 500px;
+
+    .filter {
+        padding: 20px 0;
+        border: none;
+
+        .title {
+            margin-top: 0;
+        }
+        &:not(:nth-last-of-type(2)) {
+           border-bottom: 1px solid black;
+        }
+
+        .radio-input {
+            display: none;
+        }
+        .star {
+            cursor: pointer;
+            font-size: 2rem;
+            margin: 5px;
+            color: #e4e5e9;
+
+            &.active {
+                color: #ffc107;
+            }
+        }
+
+    }
+
+
+    .remove-filters {
+        display: flex;
+        gap: 5px;
+        cursor: pointer;
+    }
+}

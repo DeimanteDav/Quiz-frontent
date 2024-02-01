@@ -1,0 +1,61 @@
+.edit-user-wrapper {
+    position: absolute;
+    display: flex;
+    gap: 50px;
+
+    .edit-user-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        border: 1px solid black;
+        margin: 30px 0;
+        min-width: 150px;
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            
+            li {
+                display: flex;
+                gap: 10px;
+                cursor: pointer;
+                padding: 15px;
+                list-style: none;
+                border: 1px solid black;
+                transition: all 0.1s ease-in;
+
+                &.active {
+                    background-color: rgb(217, 43, 43);
+                    color: white;
+                }
+            }
+        }
+    }
+
+
+    .user-info, .change-password {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .user-info-form, .change-password-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        span {
+            color: green;
+
+            &.error {
+                color: red;
+            }
+        }
+    }
+}

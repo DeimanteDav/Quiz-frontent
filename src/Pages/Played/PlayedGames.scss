@@ -1,0 +1,154 @@
+.played-game {
+    .type {
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        align-items: center;
+
+        .leaderboard-wrapper {
+            width: 100%;
+        }
+    }
+
+    .quiz {
+        max-width: 450px;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 7px;
+        margin: 20px;
+
+        h1 {
+            font-size: 17px;
+        }
+
+        .answers {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .correct-answer {
+                &::before {
+                    font-size: 15px;
+                    content: "✔️";
+                    margin-right: 5px;
+                }
+            }
+
+            .player-answer {
+                &::before {
+                    font-size: 15px;
+                    content: "❌";
+                    margin-right: 5px;
+                }
+            }
+            .null-player-answer {
+                color: rgb(110, 110, 110);
+                font-size: 12px;
+            }
+        }
+    }
+
+    .quiz-statistic-wrapper {
+        margin: 50px 0;
+        .quiz-statistic {
+            max-width: 170px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            div {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+
+                span {
+                    text-transform: capitalize;
+                
+                    &:first-child {
+                        font-weight: bold;
+                    }
+                    &:last-child {
+                        justify-self: center;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.no-games-played {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 0;
+
+    a {
+        color: black;
+        &:hover {
+            color: rgb(94, 94, 94);
+        }
+    }
+}
+
+.loading {
+    padding: 20px 50px;
+    display: flex;
+    gap: 35px;
+    * {
+        width: 400px;
+    }
+}
+
+.played-games-page {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    .tabs-wrapper {
+        padding-top: 15px;
+    }
+
+
+    .statistics-wrapper {
+       h1 {
+        margin-bottom: 15px;
+       }
+        .statistics {
+            max-width: 400px;
+            padding: 30px 50px;
+            border: 1px solid black;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            div {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+
+                span:first-child {
+                    font-weight: 500;
+                }
+                span:last-child {
+                    justify-self: center;
+                }
+            }
+        }
+    }
+    .played-games-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .played-games {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+    }
+    
+}

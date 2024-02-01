@@ -1,0 +1,160 @@
+.navigation {
+    border-bottom: 0.5px solid black;
+    img {
+        width: 20px
+    }
+    .nav-content-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+
+    
+             
+        .logo-wrapper {
+            width: 80px;
+    
+            img {
+                width: 100%;
+            }
+        }
+        .menu-button {
+            display: none;
+        }
+
+    
+        .navigation-middle {
+            display: flex;
+            gap: 30px;
+            height: 100%;
+
+            @media (max-width: 800px) {
+                gap: 20px;
+                .Home {
+                    display: none;
+                }
+            }
+    
+            a {
+                height: 100%;
+                text-decoration: none;
+                color: black;
+                position: relative;
+                display: flex;
+                align-items: center;
+                // margin: 0 20px;
+                text-align: center;
+                
+                &.active::after{
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    content: '';
+                    height: 0.25rem;
+                    background-color: black;
+                    border-top-left-radius: 3px;
+                    border-top-right-radius: 3px;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+
+        }
+
+
+        .nav-user {
+            height: 100%;
+            
+            &.log-in-btn-wrapper {
+                display: flex;
+                align-items: center;
+            }
+
+            .nav-user-info {
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                button {
+                    color: black;
+                }
+                span {
+                    font-size: 16px;
+                }
+               
+            }
+
+            .dropdown-menu {
+                border: 1px solid black;
+                max-width: 150px;
+                transition: all 0.3s ease-in-out 0s, visibility 0s;
+                position: absolute;
+                // padding: 15px;
+                // display: flex;
+                // flex-direction: column;
+                // gap: 15px; 
+                background-color: white;
+                overflow: hidden;
+
+                li {
+                    div {
+                        min-width: 40px;
+                    }
+                    a {
+                        display: flex;
+                        gap: 10px;
+                        font-size: 14px;
+                        margin: 0;
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 500;
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                
+
+                &.inactive {
+                    visibility: hidden;
+                    z-index: -1;
+                    opacity: 0;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    transform: translateY(-1em);
+                }
+                &.active  {
+                    visibility: visible;
+                    opacity: 1;
+                    z-index: 10;
+                    left: -20;
+                    transform: translateY(0%);
+                    transition-delay: 0s, 0s, 0.3s;
+                }
+            }
+
+
+        }
+
+        @media (max-width: 600px) {
+            .navigation-middle, .coins-wrapper, .nav-user {
+                display: none;
+                &.log-in-btn-wrapper {
+                    display: none;
+                }
+            }
+
+            .menu-button {
+                display: block;
+            }
+        }
+      
+    }
+}

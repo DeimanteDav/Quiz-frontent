@@ -1,0 +1,21 @@
+.user-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+
+  .info {
+    display: flex;
+    gap: 10px;
+
+    span:first-of-type {
+      font-weight: 500;
+    }
+  }
+
+  .best-games {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+}

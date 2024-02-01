@@ -1,0 +1,49 @@
+.confirmation {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);  
+    transition: opacity 300ms ease-in-out;
+    
+
+    .content {
+        position: absolute;
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px 50px 50px 50px;
+        background-color: #ffffff;
+        top: 45%;
+        left: 50%;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.25);
+        transform: translateX(-50%) translateY(-50%);
+        pointer-events: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        * {
+            text-transform: capitalize;
+        }
+
+        .top {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        button {
+            cursor: pointer;
+
+            &.buy-btn {
+                align-self: flex-start;
+            }
+        }
+    }
+}

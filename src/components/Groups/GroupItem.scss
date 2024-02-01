@@ -1,0 +1,27 @@
+.group-item {
+    width: 300px !important;
+    display: flex;
+    justify-content: space-between !important; 
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    svg {
+        cursor: pointer;
+    }
+}
+
+.group-member {
+    a {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        color: black;
+    
+        &:hover {
+            color: darkgrey;
+        }
+    }
+}

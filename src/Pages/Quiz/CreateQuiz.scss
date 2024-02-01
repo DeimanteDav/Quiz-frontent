@@ -1,0 +1,85 @@
+.create-quiz-wrapper {
+    width: 400px;
+
+    .create-quiz-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+
+        .create-question-form-wrapper {
+            // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            width: 100%;
+            padding: 35px;
+            margin: 30px 0;
+
+            h1 {
+                margin-top: 0;
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            .cancel-question-form-btn {
+                margin-top: 15px;
+                color: black;
+                border-color: black;
+
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+                }
+            }
+
+            .submit-question-button {
+                font-size: 14px;
+                padding: 7px 18px;
+            }
+        }
+
+        .submit-quiz-button {
+            background-color: transparent;
+            border: 2px solid #1A1A1A;
+            border-radius: 8px;
+            box-sizing: border-box;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 8px 25px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            touch-action: manipulation;
+            will-change: transform;
+            color: #3B3B3B;
+            
+            
+            &:not(:disabled) {
+                cursor: pointer;
+                &:hover {
+                    color: #fff;
+                    background-color: #1A1A1A;
+                    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+                    transform: translateY(-1px);
+                }
+        
+                &:active {
+                    box-shadow: none;
+                    transform: translateY(0);
+                }
+            }
+
+            &:disabled {
+                color: rgb(126, 126, 126);
+                border-color: rgb(126, 126, 126);;
+            }
+        }
+
+        .questions-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 20px;
+
+        }
+    }
+}
