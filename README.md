@@ -18,5 +18,4 @@ Welcome to Quiz-React, a dynamic and engaging quiz platform built with ReactJS a
 3. Run the app locally with ```npm start```.
 4. Connect to the [Quiz-Strapi API](https://github.com/DeimanteDav/Quiz-strapi).
 
-#
 Feel free to explore, contribute, and enhance the Quiz-React frontend. Happy quizzing!
