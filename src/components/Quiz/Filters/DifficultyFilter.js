@@ -8,7 +8,7 @@ const DifficultyFilter = ({selected, setSelected}) => {
     <fieldset className='filter'>
         <legend className='title'>Difficulty</legend>
         {DIFFICULTIES.map((difficulty) => (
-            <>
+            <div key={difficulty.id}>
                 <input
                     type="radio"
                     name="rating"
@@ -30,7 +30,7 @@ const DifficultyFilter = ({selected, setSelected}) => {
                         &#9733;
                     </span>
                 </label>
-            </>
+            </div>
         ))}
     </fieldset>
   )

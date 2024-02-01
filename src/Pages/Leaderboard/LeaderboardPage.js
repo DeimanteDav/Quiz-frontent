@@ -7,7 +7,6 @@ import Container from '../../components/Container'
 import Leaderboard from '../../components/Leaderboard/Leaderboard'
 import { Box, Tab, Tabs } from '@mui/material'
 import getFriends from '../../services/friendsHandlers/getFriends'
-import { Link } from 'react-router-dom'
 import isUserLoggedIn from '../../services/isUserLoggedIn'
 
 const LeaderboardPage = () => {
@@ -21,14 +20,12 @@ const LeaderboardPage = () => {
     const {jwt, user} = userData ? userData : []
 
 
-    // pagal quiz, gameType
-    // pvz leaderboard/title(playedGame)
-
     useEffect(() => {
         if (userData) {
             let headers = {Authorization: `Bearer ${jwt}`}
             axios(`${API_URL}/played-games?populate=*`, {headers})
                 .then(res => {
+                    console.log(res.data.data);
                     let readyData = res.data.data.map(quiz => {
                         const playedGame = quiz.attributes
     
@@ -40,23 +37,13 @@ const LeaderboardPage = () => {
                             user: playedGame.user.data
                         }
                     }).sort((a, b) => b.result - a.result)
-    
+                    
                     const filteredData = readyData.filter((value, index, self) => {
                         return index === self.findIndex((t) => (
                             t.user.id === value.user.id && t.title === value.title
                         ))
                     })     
-                    const arr = []
-    
-                    for (let i = 0; i < readyData.length; i++) {
-                        const element = readyData[i];
-    
-                        const result = arr.findIndex(item => item.user.id === element.user.id && item.title === element.title)
-    
-                        if (result < 0) {
-                            arr.push(element)
-                        }
-                    }
+
                     setAllPlayedGames(filteredData)
                 })
     
@@ -68,7 +55,7 @@ const LeaderboardPage = () => {
     }, [jwt, userData])
 
     useEffect(() => {
-        if (allPlayedGames.length > 0 && userData && friends.length > 0) {
+        if (allPlayedGames.length > 0 && userData) {
             switch (tabValue) {
                 case 0:
                     setData(allPlayedGames)
@@ -87,12 +74,10 @@ const LeaderboardPage = () => {
                 default:
             }
         }
-
-        
-
     }, [tabValue, allPlayedGames, friends, userData, user.id])
 
     const headData = ['', 'user', 'quiz title', 'game type', 'result']
+    console.log(data);
   return (
     <Container>
         <div className='leaderboard-page'>
