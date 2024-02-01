@@ -1,4 +1,4 @@
-# Quiz-React
+# Quiz Page
 Welcome to the Quiz Page built with ReactJS! 🚀
 
 ## Overview
